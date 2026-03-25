@@ -99,9 +99,10 @@ const Header = ({ setView, onSearchClick }) => (
     <div className="flex items-center gap-6">
       <button 
         onClick={() => setView({ type: 'home' })}
-        className="text-xs-bold text-accent hover:text-accent2 transition-colors"
+        className="flex items-center gap-3 group"
       >
-        Bhagavad Gita
+        <img src="/logo.png" alt="Logo" className="w-5 h-5 rounded-[2px] opacity-80 group-hover:opacity-100 transition-opacity" />
+        <span className="text-xs-bold text-accent group-hover:text-accent2 transition-colors">Bhagavad Gita</span>
       </button>
       <div className="hidden md:flex items-center gap-4 border-l border-border pl-6">
         <button onClick={() => setView({ type: 'home' })} className="text-[10px] font-bold text-muted hover:text-text uppercase tracking-widest transition-colors flex items-center gap-2">
