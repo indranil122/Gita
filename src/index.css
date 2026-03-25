@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-text: #000000;
+  --color-muted: #1f1f1f; /* Darkened from #444444 */
+  --color-accent: #a67c37;
+  --color-accent2: #8b682b;
+  --color-border: #d0d0d0; /* Slightly darker border for contrast */
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+}
+
+@layer base {
+  *, ::before, ::after {
+    border-color: var(--color-border);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Increased from 14px */
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 500;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .text-xs-bold {
+    font-family: var(--font-mono);
+    font-size: 11px; /* Increased from 10px */
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .text-heading {
+    font-size: clamp(2.5rem, 6vw, 7.5rem); /* Increased */
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    font-weight: 800; /* Bolder */
+    text-transform: uppercase;
+  }
+}
